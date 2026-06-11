@@ -1,23 +1,16 @@
-a = input("Enter a number ")
-b = input("Enter a number ")
+try:
+    a = int(input("Enter a number: "))
+    b = int(input("Enter a number: "))
 
-# conveting input to integer
+    sub1 = a - b
+    sub2 = b - a
 
-a = int(a)
-b = int(b)
+    if a > b:
+        print(f"A - B = {sub1}")
+    elif a < b:
+        print(f"B - A = {sub2}")
+    else:
+        print("A and B are the same numbers")
 
-# performing the the subtraction
-sub1 = a - b
-sub2 = b - a
-
-result1 = sub1
-result2 = sub2
-
-# using if statements to write our subtraction condition
-
-if a > b:
-    print(f"A - B = {result1}")
-elif a < b:
-    print(f"B - A = {result2}")
-elif a == b:
-    print("A and B are the same numbers")
+except ValueError:
+    print("Those are not numbers")
